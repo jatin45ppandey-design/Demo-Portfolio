@@ -1,31 +1,77 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 
 function Footer() {
   return (
-      <div>
-      <section style={{backgroundColor:'black'}} >
-       
-  <ul style={{display:'flex',gap:'150px',padding:'10px',margin:'10px',cursor:'pointer',color:'wheat',listStyle:'none',textDecoration: 'none'}}>
-    
-         <Link to = 'https://github.com/jatin45ppandey-design' style={{textDecoration: 'none'}}>
-          <li style={{color:'wheat'}}>Github</li>
-         </Link>
-         <Link to = 'https://www.linkedin.com/in/jatin-pandey-pandey-a1654237a/' style={{textDecoration: 'none'}}>
-          <li style={{color:'wheat'}}>Linkedin</li>
-         </Link>
-         <Link to = 'https://leetcode.com/u/Jatin45_Pandey/' style={{textDecoration: 'none'}}>
-          <li style={{color:'wheat'}}>Leetcode</li>
-         </Link>
-         <Link to = 'https://www.instagram.com/jatin45p/' style={{textDecoration: 'none'}}>
-            <li style={{color:'wheat'}}>Whatsapp </li>
-
-          </Link> 
-        </ul>
-      </section>
-    </div>
-    
-  )
+    <footer style={styles.footer}>
+      <ul style={styles.list}>
+        <li>
+          <a 
+            href="https://github.com/jatin45ppandey-design" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={styles.link}
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://www.linkedin.com/in/jatin-pandey-pandey-a1654237a/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={styles.link}
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://leetcode.com/u/Jatin45_Pandey/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={styles.link}
+          >
+            LeetCode
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://www.instagram.com/jatin45p/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={styles.link}
+          >
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </footer>
+  );
 }
 
-export default Footer
+// Extracting styles keeps the JSX clean and easy to read
+const styles = {
+  footer: {
+    backgroundColor: '#111', // A softer black looks a bit more premium
+    padding: '24px 0',
+    width: '100%',
+  },
+  list: {
+    display: 'flex',
+    justifyContent: 'center', // Centers the links dynamically
+    flexWrap: 'wrap', // Allows links to drop to a new line on tiny screens
+    gap: '40px', // A more mobile-friendly gap
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+  },
+  link: {
+    color: 'wheat',
+    textDecoration: 'none',
+    fontSize: '1rem',
+    fontWeight: '500',
+    cursor: 'pointer',
+  }
+};
+
+export default Footer;

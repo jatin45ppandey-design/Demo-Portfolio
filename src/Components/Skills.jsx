@@ -1,70 +1,111 @@
 import React from 'react';
-import SlickSlider from "react-slick";
+import SlickSlider from "react-slick"; // Using your original import name to handle Vite's ESM resolution
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Import the specific icons you need
+import { FaHtml5, FaCss3Alt, FaReact, FaJava, FaLaptopCode } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
+
+// Define your list to hold objects with a name, icon, and brand color
+const skillList = [
+  { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
+  { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "React", icon: FaReact, color: "#61DAFB" },
+  { name: "Java", icon: FaJava, color: "#007396" },
+  { name: "Full Stack", icon: FaLaptopCode, color: "#20c997" }
+];
+
 function Skills() {
+  // The Vite fix: ensure the component resolves correctly whether it's the default export or not
+  const Slider = SlickSlider.default ? SlickSlider.default : SlickSlider;
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay:true,
-    autoplaySpeed:1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 1 }
+      }
+    ]
   };
 
-  const Slider = SlickSlider.default ? SlickSlider.default : SlickSlider;
-  
   return (
-    <>
-      <div>
-        <h3>Skills</h3>
+    <section style={styles.container}>
+      <h2 style={styles.heading}>My Skills</h2>
+      
+      <div style={styles.sliderWrapper}>
+        <Slider {...settings}>
+          {skillList.map((skill, index) => {
+            // Assign the icon component to a capitalized variable so React knows it's a component
+            const IconComponent = skill.icon;
+            
+            return (
+              <div key={index}>
+                <div style={styles.card}>
+                  <div style={styles.iconWrapper}>
+                    {/* Render the icon with its specific brand color */}
+                    <IconComponent size={60} color={skill.color} />
+                  </div>
+                  <h3 style={styles.skillText}>{skill.name}</h3>
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
       </div>
-      <Slider {...settings}>
-
-{/* First Skill */}
-
-        <div style={{backgroundColor:'grey'}}>
-            <h1>
-                Html
-            </h1>
-        </div>
-
-        {/* First Skill */}
-
-        <div style={{backgroundColor:'grey'}}>
-            <h1>
-                Html
-            </h1>
-        </div>
-
-        {/* First Skill */}
-
-        <div style={{backgroundColor:'grey'}}>
-            <h1>
-                FSD
-            </h1>
-        </div>
-
-        {/* First Skill */}
-
-        <div style={{backgroundColor:'grey'}}>
-            <h1>
-                Java
-            </h1>
-        </div>
-
-        {/* First Skill */}
-
-        <div style={{backgroundColor:'grey'}}>
-            <h1>
-                CSS
-            </h1>
-        </div>
-      </Slider>
-    </>
+    </section>
   );
 }
+
+const styles = {
+  container: {
+    padding: '60px 20px',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    textAlign: 'center',
+  },
+  heading: {
+    fontSize: '2rem',
+    marginBottom: '40px',
+    color: '#333',
+  },
+  sliderWrapper: {
+    padding: '0 10px',
+  },
+  card: {
+    backgroundColor: '#2d3748', 
+    borderRadius: '12px',
+    padding: '40px 20px',
+    margin: '0 15px',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    cursor: 'grab',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconWrapper: {
+    marginBottom: '16px',
+  },
+  skillText: {
+    color: 'wheat',
+    margin: 0,
+    fontSize: '1.5rem',
+    fontWeight: '600',
+  }
+};
 
 export default Skills;
