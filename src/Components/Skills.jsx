@@ -1,13 +1,12 @@
 import React from 'react';
-import SlickSlider from "react-slick"; // Using your original import name to handle Vite's ESM resolution
+import SlickSlider from "react-slick"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Import the specific icons you need
+
 import { FaHtml5, FaCss3Alt, FaReact, FaJava, FaLaptopCode } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 
-// Define your list to hold objects with a name, icon, and brand color
 const skillList = [
   { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
   { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
@@ -49,7 +48,7 @@ function Skills() {
       <div style={styles.sliderWrapper}>
         <Slider {...settings}>
           {skillList.map((skill, index) => {
-            // Assign the icon component to a capitalized variable so React knows it's a component
+            
             const IconComponent = skill.icon;
             
             return (
