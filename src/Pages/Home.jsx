@@ -1,5 +1,8 @@
 import React from 'react';
-import img1 from '../assets/jatin.png';
+// import img1 from '../assets/jatin.png';
+import img2 from '../assets/is.png';
+
+
 
 
 function Home() {
@@ -15,7 +18,7 @@ function Home() {
         
         {/* Profile Picture */}
         <img 
-          src={img1}
+          src={img2}
           alt="Jatin Pandey" 
           style={{
             width: '150px',
