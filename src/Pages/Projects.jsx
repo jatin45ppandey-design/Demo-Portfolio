@@ -14,7 +14,6 @@ function Projects() {
           <h2>Spring Boot & JDBC Example</h2>
           <p>Learned about Spring Boot and JDBC, including how they work together to connect to a PostgreSQL database.</p>
           <p><strong>Technology:</strong> Java</p>
-          {/* target="_blank" makes the link open in a new tab */}
           <a href="https://github.com/jatin45ppandey-design/SpringJDBCeg" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
@@ -40,7 +39,7 @@ function Projects() {
           <p>My first and second independent projects using Hibernate through Maven on IntelliJ to practice database mapping.</p>
           <p><strong>Technology:</strong> Java</p>
           <a href="https://github.com/jatin45ppandey-design/HibernatePro_Program-1" target="_blank" rel="noopener noreferrer">View Repo 1</a>
-          {' | '} {/* This just adds a little line between the two links */}
+          {' | '} 
           <a href="https://github.com/jatin45ppandey-design/HIBERNATEPRO_2" target="_blank" rel="noopener noreferrer">View Repo 2</a>
         </div>
 
@@ -86,12 +85,22 @@ function Projects() {
 
         {/* --- Project 7 --- */}
         <div>
-          <h2>Demo Portfolio & ICT Website</h2>
-          <p>Practice websites including this current portfolio, built to learn and practice frontend development.</p>
-          <p><strong>Technologies:</strong> React, JavaScript, HTML</p>
-          <a href="https://github.com/jatin45ppandey-design/Demo-Portfolio" target="_blank" rel="noopener noreferrer">Portfolio Repo</a>
-          {' | '}
-          <a href="https://github.com/jatin45ppandey-design/ICT-Demo-Website" target="_blank" rel="noopener noreferrer">ICT Website Repo</a>
+          <h2>Demo Portfolio</h2>
+          <p>A practice website built to learn React and frontend development. It serves as the foundation for my current portfolio.</p>
+          <p><strong>Technologies:</strong> React, JavaScript</p>
+          <a href="https://github.com/jatin45ppandey-design/Demo-Portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+
+        <br />
+        <hr style={{ width: '50%' }} />
+        <br />
+
+        {/* --- Project 8 --- */}
+        <div>
+          <h2>ICT Demo Website</h2>
+          <p>A practice website built to understand foundational frontend concepts and basic web structure.</p>
+          <p><strong>Technologies:</strong> React</p>
+          <a href="https://github.com/jatin45ppandey-design/ICT-Demo-Website" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
       </section>
