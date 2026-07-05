@@ -18,7 +18,7 @@ function Certificates() {
         <div>
           
           <img src={gen} alt="AI Certificate" width="650px" />
-          {/* Only the name is kept here, right below the image */}
+         
           <h2>Generative AI Essentials</h2>
         </div>
 
