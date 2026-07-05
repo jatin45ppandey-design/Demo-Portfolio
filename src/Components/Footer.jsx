@@ -49,10 +49,10 @@ function Footer() {
   );
 }
 
-// Extracting styles keeps the JSX clean and easy to read
+
 const styles = {
   footer: {
-    backgroundColor: '#111', // A softer black looks a bit more premium
+    backgroundColor: '#111', 
     padding: '24px 0',
     width: '100%',
   },

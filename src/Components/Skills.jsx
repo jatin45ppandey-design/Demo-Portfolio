@@ -17,7 +17,7 @@ const skillList = [
 ];
 
 function Skills() {
-  // The Vite fix: ensure the component resolves correctly whether it's the default export or not
+
   const Slider = SlickSlider.default ? SlickSlider.default : SlickSlider;
 
   const settings = {
@@ -55,7 +55,7 @@ function Skills() {
               <div key={index}>
                 <div style={styles.card}>
                   <div style={styles.iconWrapper}>
-                    {/* Render the icon with its specific brand color */}
+                    {}
                     <IconComponent size={60} color={skill.color} />
                   </div>
                   <h3 style={styles.skillText}>{skill.name}</h3>
