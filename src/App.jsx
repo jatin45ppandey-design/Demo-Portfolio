@@ -8,10 +8,6 @@ import Projects from './Pages/Projects'
 import Certificates from './Pages/Certificates'
 import Home from './Pages/Home'
 
-
-
-
-
 function App() {
   return (
     <>
